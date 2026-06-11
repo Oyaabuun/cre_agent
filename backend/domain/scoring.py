@@ -5,6 +5,7 @@ def combine_scores(
     commute,
     schools,
     flood,
+    safety,
     *,
     region_tier="tier_2_3",
     end_use="unspecified",
@@ -23,19 +24,21 @@ def combine_scores(
     if region_tier == "tier_1":
         weights = {
             "pricing": 0.25,
-            "livability": 0.20,
+            "livability": 0.15,
             "flood": 0.15,
-            "access": 0.15,
-            "commute": 0.15,
+            "safety": 0.15,
+            "access": 0.10,
+            "commute": 0.10,
             "schools": 0.10,
         }
     else:
         # Tier 2/3 → pricing + flood + schools matter more
         weights = {
-            "pricing": 0.30,
+            "pricing": 0.25,
             "livability": 0.15,
-            "flood": 0.20,
-            "access": 0.10,
+            "flood": 0.15,
+            "safety": 0.15,
+            "access": 0.05,
             "commute": 0.10,
             "schools": 0.15,
         }
@@ -44,6 +47,7 @@ def combine_scores(
         weights["pricing"] * pricing +
         weights["livability"] * livability +
         weights["flood"] * flood +
+        weights["safety"] * safety +
         weights["access"] * access +
         weights["commute"] * commute +
         weights["schools"] * schools

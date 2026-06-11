@@ -10,6 +10,7 @@ which is the single strongest determinant of:
 
 from typing import Optional
 from data.signal_cache import get_signal_cache, save_signal_cache
+from utils.market_research import fetch_road_info
 
 
 # -------------------------------------------------------------------
@@ -80,10 +81,20 @@ async def road_access_signal(
     # -------------------------
     confidence = 0.4
     width_ft = None
+    research_data = None
 
     if user_road_width_ft:
         width_ft = float(user_road_width_ft)
         confidence = 0.9
+    else:
+        # Try live research
+        try:
+            research_data = await fetch_road_info(location.get("address", ""))
+            if research_data.get("width_ft"):
+                width_ft = float(research_data["width_ft"])
+                confidence = research_data.get("confidence", 0.5)
+        except Exception as e:
+            print(f"DEBUG: Road info research failed: {e}")
 
     # -------------------------
     # Unknown width fallback
@@ -113,6 +124,13 @@ async def road_access_signal(
     # -------------------------
     for rule in ROAD_WIDTH_RULES:
         if width_ft >= rule["min_ft"]:
+            summary = (
+                f"Plot has approximately {int(width_ft)} ft road frontage, "
+                f"classified as {rule['label'].lower()}."
+            )
+            if research_data and research_data.get("source") == "Researched via Live Search":
+                summary = f"Researched Insight: {summary} Source: {research_data['source']} ({research_data.get('conditions', '')})"
+
             result = {
                 "category": rule["category"],
                 "label": rule["label"],
@@ -121,14 +139,12 @@ async def road_access_signal(
                 "liquidity_factor": rule["liquidity_factor"],
                 "details": {
                     "road_width_ft": width_ft,
-                    "classification_basis": "user_provided",
+                    "lanes": research_data.get("lanes") if research_data else None,
+                    "classification_basis": "user_provided" if user_road_width_ft else "live_research",
+                    "conditions": research_data.get("conditions") if research_data else None,
+                    "is_live_research": research_data.get("is_live", False) if research_data else False
                 },
-                "summary": (
-                    f"Plot has approximately {int(width_ft)} ft road frontage, "
-                    f"classified as {rule['label'].lower()}. "
-                    "This materially impacts land value, construction ease, "
-                    "and long-term resale potential."
-                ),
+                "summary": summary + " This materially impacts land value, construction ease, and long-term resale potential.",
             }
             await save_signal_cache(cache_key, result)
             return result

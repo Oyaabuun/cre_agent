@@ -6,7 +6,7 @@ No markdown. No explanation outside JSON.
 
 INPUT:
 {
-  "asking_price": 9000000,
+  "asking_price": 8500000,
   "property_type": "2bhk",
   "end_use": "both",
   "region": {
@@ -14,17 +14,34 @@ INPUT:
     "label": "Bengaluru"
   },
   "location": {
-    "lat": 12.982305742474422,
-    "lng": 77.63545540771487,
+    "lat": 12.949584873590148,
+    "lng": 77.57544257356825,
     "source": "coordinates"
   },
   "signals": {
     "pricing": {
-      "score": 0.45,
-      "summary": "Insufficient transaction data; pricing confidence is low. Absence of transaction data increases valuation risk and resale uncertainty.",
+      "score": 0.85,
+      "summary": "Pricing Insight (Live Google Research): In the micro-market of Vishweshwarapura (V.V. Puram) and Sudhama Nagar, Bengaluru (560004), 2BHK apartments typically command a buy price between \u20b975 lakhs and \u20b91.5 crores, reflecting its high-demand central location and proximity to commercial hubs like Sajjan Rao Circle.",
       "details": {
-        "pricing_basis": "no_comparables",
-        "confidence_note": "Low confidence due to lack of recent transactions"
+        "pricing_basis": "web_market_benchmark",
+        "benchmarks": {
+          "source": "Live Google Research",
+          "benchmark_low": 7500000,
+          "benchmark_high": 15000000,
+          "summary": "In the micro-market of Vishweshwarapura (V.V. Puram) and Sudhama Nagar, Bengaluru (560004), 2BHK apartments typically command a buy price between \u20b975 lakhs and \u20b91.5 crores, reflecting its high-demand central location and proximity to commercial hubs like Sajjan Rao Circle.",
+          "citations": [
+            "https://www.99acres.com/property-rates-in-vishweshwarapura-bangalore-ffid",
+            "https://housing.com/in/buy/price-trends/P6e0e6v3572p7j387",
+            "https://www.magicbricks.com/property-for-sale-in-vishweshwarapura-bangalore-pppfs",
+            "https://www.nobroker.in/property-for-sale-in-vishweshwarapura-bangalore"
+          ],
+          "confidence": 0.9,
+          "is_live": true
+        },
+        "input_price": 8500000,
+        "recommended_band": 15000000,
+        "source": "Live Google Research",
+        "is_live_research": true
       }
     },
     "road_access": {
@@ -40,30 +57,61 @@ INPUT:
       "summary": "Exact road width could not be verified. Internal residential access is assumed, which may impact construction feasibility and resale liquidity."
     },
     "air_quality": {
-      "score": 0.45,
-      "summary": "Air quality is Moderate pollution (health impact possible). Dominant pollutant: pm25. Sensitive individuals may experience discomfort.",
+      "score": 0.7,
+      "summary": "Air quality is Satisfactory (typical urban India). Dominant pollutant: pm25. This is typical across many Indian cities.",
       "details": {
-        "raw_aqi": 151,
-        "normalized_category": "Moderate pollution (health impact possible)",
+        "raw_aqi": 75,
+        "normalized_category": "Satisfactory (typical urban India)",
         "dominant_pollutant": "pm25",
         "data_source": "waqi"
       }
     },
     "hospital_access": {
-      "score": 0.21,
-      "summary": "Nearest hospital 'Manipal Hospitals' is 10.0 km away (45 min in peak traffic) This reflects typical infrastructure gaps in Tier 2/3 regions.",
+      "score": 1.0,
+      "summary": "Nearest hospital 'United Hospital - Best Surgical Hospital & Family Care Clinic' is 2.6 km away (7 min with live traffic)",
       "details": {
-        "distance_km": 10.0,
-        "duration_min": 45.0,
-        "traffic_penalty": 0.7
+        "nearby_hospitals": [
+          {
+            "name": "Sagar Hospitals \u2013 Multispeciality Hospital Jayanagar",
+            "distance_km": 5.1,
+            "duration_min": 15.0,
+            "address": "No.44/54, 30th Cross Rd, Extension, 4th T Block East, Tilak Nagar, Jayanagar, Bengaluru"
+          },
+          {
+            "name": "Sri Sairam Hospital - BTM Layout",
+            "distance_km": 6.7,
+            "duration_min": 18.0,
+            "address": "33, Bannerghatta Main Rd, BHCS Layout, BHBCS Layout, BTM Layout 2nd Stage, BTM Layout, Bengaluru"
+          },
+          {
+            "name": "AV Multi-speciality Hospital - Banashankari",
+            "distance_km": 5.8,
+            "duration_min": 16.0,
+            "address": "Hosakerehalli Main Rd, opp. Gupta College, 6th Block, Banashankari 3rd Stage, Banashankari, Bengaluru"
+          },
+          {
+            "name": "LIFE CARE HOSPITAL-LCH,BTM LAYOUT",
+            "distance_km": 8.0,
+            "duration_min": 21.0,
+            "address": "Gangothri circle, 23/24,new99, 20th Main Rd, 1st Stage, BTM 1st Stage, Bengaluru"
+          },
+          {
+            "name": "United Hospital - Best Surgical Hospital & Family Care Clinic",
+            "distance_km": 2.6,
+            "duration_min": 7.0,
+            "address": "United hospital, 30, Madhavan Park Circle, Bairasandra Extension, Jaya Nagar 1st Block, Jayanagar 3rd Block East, Jayanagar, Bengaluru"
+          }
+        ],
+        "nearest_hospital": "United Hospital - Best Surgical Hospital & Family Care Clinic",
+        "traffic_applied": true
       }
     },
     "commute_stress": {
-      "score": 0.7,
-      "summary": "Moderate commute stress (45 min peak-hour travel)",
+      "score": 1.0,
+      "summary": "Low commute stress (0 min travel time)",
       "details": {
-        "duration_min": 45.0,
-        "distance_km": 10.0,
+        "duration_min": 0.0,
+        "distance_km": 0.0,
         "assumption": "Approximate local commute estimate."
       }
     },
@@ -72,27 +120,49 @@ INPUT:
       "summary": "Excellent school access (20 schools within 3 km) This supports family end-use suitability.",
       "details": {
         "school_count": 20,
-        "notable_schools": [
-          "RBANM's High School",
-          "National Public School",
-          "New Horizon Public School",
-          "Eastwood High School",
-          "HappyDays Preschool"
+        "nearby_schools": [
+          {
+            "name": "Fort High School",
+            "distance_km": 1.3,
+            "duration_min": 4.0
+          },
+          {
+            "name": "Growing Wonders Montessori (Centre #2)",
+            "distance_km": 1.5,
+            "duration_min": 4.0
+          },
+          {
+            "name": "The Bangalore Higher Secondary School",
+            "distance_km": 1.6,
+            "duration_min": 5.0
+          }
         ]
       }
     },
     "flood_risk": {
       "score": 0.8,
-      "summary": "Low flood risk (elevation: 916.3 m)",
+      "summary": "Low flood risk (elevation: 932.9 m)",
       "details": {
-        "elevation_m": 916.3,
+        "elevation_m": 932.9,
         "water_bodies_nearby": false
       }
+    },
+    "crime_safety": {
+      "score": 0.42,
+      "summary": "Public safety is currently strained by a spike in violent street-level crime and significant property theft, prompting heightened government scrutiny of police integrity. While law enforcement is implementing stricter controls on substance abuse, the presence of armed robbery remains a high concern.",
+      "details": {
+        "primary_police_jurisdiction": "Kalasipalya Police station (1.2 km away)",
+        "local_sentiment": "4.1 \u2b50 (Based on 10 reviews)",
+        "top_review_themes": "Reviews indicate that central precincts are overwhelmed by high foot traffic and chaotic urban environments.",
+        "incident_profile": "The profile is characterized by violent knife-point robberies, high-value residential theft, and growing concerns over narcotics and juvenile delinquency. Public order is also frequently impacted by large-scale demonstrations and systemic cybercrime.",
+        "is_live_research": true
+      }
     }
-  }
+  },
+  "custom_request": ""
 }
 
-NUMERIC_SCORE (0–1): 0.56
+NUMERIC_SCORE (0–1): 0.8
 
 RULES:
 - Be conservative

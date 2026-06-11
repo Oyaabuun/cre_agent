@@ -70,3 +70,186 @@ DEBUG: resolved location: {'lat': 12.949375620106379, 'lng': 77.54018089890955, 
 
 DEBUG: evaluate_property received data: {'address': '532, 16th Cross Rd, Indira Nagar II Stage, Hoysala Nagar, Indiranagar, Bengaluru, Karnataka 560038, India', 'lat': 12.982305742474422, 'lng': 77.63545540771487, 'asking_price': 9000000, 'property_type': '2bhk', 'radius_m': 3500}
 DEBUG: resolved location: {'lat': 12.982305742474422, 'lng': 77.63545540771487, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '382, Gate, Lakshminarayana Pura, AECS Layout, Munnekollal, Bengaluru, Karnataka 560037, India', 'lat': 12.958049884072313, 'lng': 77.71510628662112, 'asking_price': 85000000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 12.958049884072313, 'lng': 77.71510628662112, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '382, Gate, Lakshminarayana Pura, AECS Layout, Munnekollal, Bengaluru, Karnataka 560037, India', 'lat': 12.958049884072313, 'lng': 77.71510628662112, 'asking_price': 85000000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 12.958049884072313, 'lng': 77.71510628662112, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '382, Gate, Lakshminarayana Pura, AECS Layout, Munnekollal, Bengaluru, Karnataka 560037, India', 'lat': 12.958049884072313, 'lng': 77.71510628662112, 'asking_price': 85000000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 12.958049884072313, 'lng': 77.71510628662112, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'KOKILA ROYAL GARDEN, 6RP3+P54, Pokhariput, Bhubaneswar, Odisha 751020', 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 20.2367653, 'lng': 85.80294409999999, 'formatted_address': '6RP3+P54, Pokhariput, Bhubaneswar, Odisha 751020, India', 'place_id': 'ChIJzcJ7UQCnGToRvwQNaagvnvE', 'source': 'cache'}
+
+DEBUG: evaluate_property received data: {'address': 'FM Nagar, Balasore, Odisha', 'property_type': 'land', 'land_area_sqft': 2613.6000000000004, 'asking_price': 3800000, 'radius_m': 2000, 'end_use': 'self_use', 'road_width_ft': 30}
+DEBUG: resolved location: {'lat': 21.4819899, 'lng': 86.91545359999999, 'formatted_address': 'Fakir Mohan Nagar, Balasore, Odisha 756001, India', 'place_id': 'ChIJE4S823H1HDoREB8PtvyDkYg', 'source': 'cache'}
+
+DEBUG: evaluate_property received data: {'address': '22, Kavika Lay Out, Bapuji Nagar, Bengaluru, Karnataka 560026, India', 'lat': 12.952702156906769, 'lng': 77.54081726074219, 'asking_price': 9000000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 12.952702156906769, 'lng': 77.54081726074219, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'GW34+CR4, Kukudapada, Balia, Balasore, Baleshwar, Odisha 756056, India', 'lat': 21.50359116150163, 'lng': 86.90685698946913, 'asking_price': 7000000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 21.50359116150163, 'lng': 86.90685698946913, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'KOKILA ROYAL GARDEN, 6RP3+P54, Pokhariput, Bhubaneswar, Odisha 751020', 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 20.2367653, 'lng': 85.80294409999999, 'formatted_address': '6RP3+P54, Pokhariput, Bhubaneswar, Odisha 751020, India', 'place_id': 'ChIJzcJ7UQCnGToRvwQNaagvnvE', 'source': 'cache'}
+
+DEBUG: evaluate_property received data: {'address': '58/A, 31st A Cross Rd, 7th Block, Jayanagar, Bengaluru, Karnataka 560070, India', 'lat': 12.927935876347046, 'lng': 77.57777718505862, 'asking_price': 75000000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 12.927935876347046, 'lng': 77.57777718505862, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '91, Ashoka Ave Rd, Murugeshpalya, K R Garden, Bengaluru, Karnataka 560017, India', 'lat': 12.954704062894079, 'lng': 77.65536812744143, 'asking_price': 85000000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 12.954704062894079, 'lng': 77.65536812744143, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '89, Halasuru, Deena Bandu Nagar, Jeevan Kendra Layout, Jogupalya, Bengaluru, Karnataka 560008, India', 'lat': 12.967752511224026, 'lng': 77.62721566162112, 'asking_price': 7500000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 12.967752511224026, 'lng': 77.62721566162112, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'FV7G+QPH, Banaparia, Odisha 756056, India', 'lat': 21.46549279197393, 'lng': 86.87597276807743, 'asking_price': 8000000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 21.46549279197393, 'lng': 86.87597276807743, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'Skyline Apartments, 546/2, Akkithimana Halli, Bheemanna Garden, Lakshmiamma Garden, Shanti Nagar, Bengaluru, Karnataka 560027, India', 'lat': 12.961061084695606, 'lng': 77.59940651855472, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 3500}
+DEBUG: resolved location: {'lat': 12.961061084695606, 'lng': 77.59940651855472, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'XJ3M+P3 Bengaluru, Karnataka, India', 'lat': 12.954369478304082, 'lng': 77.63270882568362, 'asking_price': 9000000, 'property_type': '2bhk', 'radius_m': 3500}
+DEBUG: resolved location: {'lat': 12.954369478304082, 'lng': 77.63270882568362, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '785, 3rd Main Rd, Gaurav Nagar, Phase 7, J. P. Nagar, Bengaluru, Kothnur, Karnataka 560078, India', 'lat': 12.887730875009591, 'lng': 77.58098695148267, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000}
+DEBUG: resolved location: {'lat': 12.887730875009591, 'lng': 77.58098695148267, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '5th Cross, 11th Main Rd, near Raymond, Geetha Colony, 4th T Block East, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.929608972173877, 'lng': 77.58498696289065, 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.929608972173877, 'lng': 77.58498696289065, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'V N Residency, Chikkalasandra Main Rd, Simha Layout, Sarvabhouma Nagar, Padmanabhanagar, Bengaluru, Karnataka 560061, India', 'lat': 12.913500122660059, 'lng': 77.55080663974653, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.913500122660059, 'lng': 77.55080663974653, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '24, 3rd Main Rd, near KFC, Stage 2, Hoysala Nagar, Indiranagar, Bengaluru, Karnataka 560038, India', 'lat': 12.97799849220186, 'lng': 77.64022185700868, 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 3000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.97799849220186, 'lng': 77.64022185700868, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '99-5, 24th Cross Rd, 4th T Block East, KV Layout, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.931850907081726, 'lng': 77.58814551546278, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.931850907081726, 'lng': 77.58814551546278, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '22, 27th Cross Rd, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560070, India', 'lat': 12.931181676108991, 'lng': 77.5781891555995, 'asking_price': 7500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.931181676108991, 'lng': 77.5781891555995, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '22, 27th Cross Rd, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560070, India', 'lat': 12.931181676108991, 'lng': 77.5781891555995, 'asking_price': 7500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.931181676108991, 'lng': 77.5781891555995, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '22, 27th Cross Rd, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560070, India', 'lat': 12.931181676108991, 'lng': 77.5781891555995, 'asking_price': 7500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.931181676108991, 'lng': 77.5781891555995, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '72, 13th Main Rd, opposite Diabler Auto, 4th T Block East, Jayanagar 4th Block East, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.930512443341485, 'lng': 77.58711554720107, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.930512443341485, 'lng': 77.58711554720107, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '279, 10th Main Rd, Jaya Nagar 1st Block, Jayanagar 3rd Block, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.931181676108991, 'lng': 77.58471228792372, 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.931181676108991, 'lng': 77.58471228792372, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '30, 7th B Main Rd, behind Ganesha Temple, 4th Block, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.92917397242253, 'lng': 77.58230902864638, 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 3500, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.92917397242253, 'lng': 77.58230902864638, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '30, 7th B Main Rd, behind Ganesha Temple, 4th Block, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.92917397242253, 'lng': 77.58230902864638, 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 3500, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.92917397242253, 'lng': 77.58230902864638, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '9th, block 1180, 26th Main Rd, opp. RAGHAVENDRA HOTEL, 4th T Block East, Jayanagar, Bengaluru, Karnataka 560041, India', 'lat': 12.925827763722687, 'lng': 77.59363867952528, 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 4000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.925827763722687, 'lng': 77.59363867952528, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '5/1, 5/1, 5th Main Rd, 4th Block, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.930177826284734, 'lng': 77.58059241487685, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.930177826284734, 'lng': 77.58059241487685, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'block Hudco, Block 27, Venkatapura Main Rd, KSRP Block, Santhosapuram, 1st Block Koramangala, Koramangala, Bengaluru, Karnataka 560034, India', 'lat': 12.921812254079223, 'lng': 77.63003089143935, 'asking_price': 9200000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.921812254079223, 'lng': 77.63003089143935, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '56/1C, 2nd Block, Govindaraja Nagar Ward, Byraveshwaranagar, Vijayanagar, Bengaluru, Karnataka 560072, India', 'lat': 12.963302736705556, 'lng': 77.5229141922206, 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.963302736705556, 'lng': 77.5229141922206, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'Srimayamma Nilayam, 19, 6th Cross Rd, 7th Block, Ittamadu, Banashankari 3rd Stage, Banashankari, Bengaluru, Karnataka 560085, India', 'lat': 12.921812254079223, 'lng': 77.54454352571669, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 4000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.921812254079223, 'lng': 77.54454352571669, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '151, A56/151, 9th Main Rd, Jaya Nagar 1st Block, Block 3, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.934193201351208, 'lng': 77.58402564241591, 'asking_price': 10000000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.934193201351208, 'lng': 77.58402564241591, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '332, 22nd Cross Rd, 4th T Block East, KV Layout, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.932520131153785, 'lng': 77.58842018519103, 'asking_price': 10000000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.932520131153785, 'lng': 77.58842018519103, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'Aretimmappa Nilayam, 827, 7th A Cross Rd, Vbhcs Layout, Block 3, Banashankari 3rd Stage, Banashankari, Bengaluru, Karnataka 560085, India', 'lat': 12.93328339291934, 'lng': 77.5478366572368, 'asking_price': 9800000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.93328339291934, 'lng': 77.5478366572368, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '6424+P4 Bheemapura, Karnataka, India', 'lat': 13.20184074663145, 'lng': 78.1053270460411, 'asking_price': 9800000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 13.20184074663145, 'lng': 78.1053270460411, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'Whitefield, Dodsworth Layout, Whitefield, Bengaluru, Karnataka 560066, India', 'lat': 12.9697446, 'lng': 77.7445575, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.9697446, 'lng': 77.7445575, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '304, 8th Main Rd, Poorna Prajna Layout, Phase 1, Kodipur, Bengaluru, Karnataka 560061, India', 'lat': 12.90976533781474, 'lng': 77.5339005203456, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy'}
+DEBUG: resolved location: {'lat': 12.90976533781474, 'lng': 77.5339005203456, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '350, 5th Cross Rd, Golahalli, Anjanapura Twp, Lal Bahadur Shastri Nagar, Bengaluru, Karnataka 560108, India', 'lat': 12.862131470064856, 'lng': 77.56591965527724, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2500, 'intent': 'buy', 'custom_request': 'which floor is best'}
+DEBUG: resolved location: {'lat': 12.862131470064856, 'lng': 77.56591965527724, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '362/28, 2nd Block, Jaya Nagar East, Jayanagar, Bengaluru, Karnataka 560011, India', 'lat': 12.938308889640211, 'lng': 77.5822403808594, 'asking_price': 8600000, 'property_type': '2bhk', 'radius_m': 2500, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 12.938308889640211, 'lng': 77.5822403808594, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '54, 1st Main Road Tata Silk Farm, Jayanagar, MSR NIGAM, 1st Main Rd, Tata Silk Farm, Basavanagudi, Bengaluru, Karnataka 560004, India', 'lat': 12.936301243307218, 'lng': 77.57468728027347, 'asking_price': 4500000, 'property_type': '2bhk', 'radius_m': 3000, 'intent': 'buy', 'custom_request': 'which floor is best'}
+DEBUG: resolved location: {'lat': 12.936301243307218, 'lng': 77.57468728027347, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '4, 1st Main Rd, Lakkasandra, Laljinagar, Wilson Garden, Bengaluru, Karnataka 560030, India', 'lat': 12.939647311550573, 'lng': 77.59974984130862, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': 'best floor'}
+DEBUG: resolved location: {'lat': 12.939647311550573, 'lng': 77.59974984130862, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'BOYS HOSTEL BLOCK-1, Mount Joy Extension, Basavanagudi, Bengaluru, Karnataka 560004, India', 'lat': 12.939981915905769, 'lng': 77.56473092041018, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 12.939981915905769, 'lng': 77.56473092041018, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '88/77, Sarvabhouma Nagar, Padmanabhanagar, Bengaluru, Karnataka 560061, India', 'lat': 12.914885344114632, 'lng': 77.55271462402347, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 12.914885344114632, 'lng': 77.55271462402347, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'WHR9+33J, Bull Temple Rd, NR Colony, Basavanagudi, Bengaluru, Karnataka 560004, India', 'lat': 12.939981915905769, 'lng': 77.56747750244143, 'asking_price': 4500000, 'property_type': '2bhk', 'radius_m': 3500, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 12.939981915905769, 'lng': 77.56747750244143, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'WHR9+33J, Bull Temple Rd, NR Colony, Basavanagudi, Bengaluru, Karnataka 560004, India', 'lat': 12.939981915905769, 'lng': 77.56747750244143, 'asking_price': 7500000, 'property_type': '2bhk', 'radius_m': 3500, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 12.939981915905769, 'lng': 77.56747750244143, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '116, 13th Cross Rd, Siddanna Layout, Banashankari Stage II, Banashankari, Bengaluru, Karnataka 560070, India', 'lat': 12.928839353571181, 'lng': 77.56376959993544, 'asking_price': 8700000, 'property_type': '2bhk', 'radius_m': 2500, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 12.928839353571181, 'lng': 77.56376959993544, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'XH2R+4RJ, Mavalli, Bengaluru, Karnataka 560027, India', 'lat': 12.949919464606134, 'lng': 77.59192206575575, 'asking_price': 8700000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 12.949919464606134, 'lng': 77.59192206575575, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '6-113/A, 6-113/A, 2nd Cross Rd, NR Colony, Basavanagudi, Bengaluru, Karnataka 560070, India', 'lat': 12.935531645346348, 'lng': 77.5672028274745, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 12.935531645346348, 'lng': 77.5672028274745, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '16, 2nd Main Rd, NR Colony, Basavanagudi, Bengaluru, Karnataka 560004, India', 'lat': 12.938208511791931, 'lng': 77.56754615022841, 'asking_price': 10200000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 12.938208511791931, 'lng': 77.56754615022841, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'NH16, Bhimpura Chhaka, in front of HP petrolpump, Kalidaspur, Balia, Balasore, Baleshwar, Odisha 756056, India', 'lat': 21.5098818149172, 'lng': 86.90261836358694, 'asking_price': 10200000, 'property_type': 'land', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 21.5098818149172, 'lng': 86.90261836358694, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'NH16, Bhimpura Chhaka, in front of HP petrolpump, Kalidaspur, Balia, Balasore, Baleshwar, Odisha 756056, India', 'lat': 21.5098818149172, 'lng': 86.90261836358694, 'asking_price': 10200000, 'property_type': 'land', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 21.5098818149172, 'lng': 86.90261836358694, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'GW53+HV8, Balia, Balasore, Baleshwar, Odisha 756056, India', 'lat': 21.508739246795727, 'lng': 86.90435794905753, 'asking_price': 10200000, 'property_type': 'land', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 21.508739246795727, 'lng': 86.90435794905753, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'GW53+HV8, Balia, Balasore, Baleshwar, Odisha 756056, India', 'lat': 21.50904870475298, 'lng': 86.90446652372167, 'asking_price': 10200000, 'property_type': 'land', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 21.50904870475298, 'lng': 86.90446652372167, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'GW53+HV8, Balia, Balasore, Baleshwar, Odisha 756056, India', 'lat': 21.50904870475298, 'lng': 86.90446652372167, 'asking_price': 10200000, 'property_type': '3bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': ''}
+DEBUG: resolved location: {'lat': 21.50904870475298, 'lng': 86.90446652372167, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'GW53+HV8, Balia, Balasore, Baleshwar, Odisha 756056, India', 'lat': 21.508662298157777, 'lng': 86.90427850250248, 'asking_price': 10200000, 'property_type': 'land', 'radius_m': 2000, 'intent': 'buy', 'custom_request': '', 'land_area_sqft': 12000.0, 'road_width_ft': None}
+DEBUG: resolved location: {'lat': 21.508662298157777, 'lng': 86.90427850250248, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'GW53+HV8, Balia, Balasore, Baleshwar, Odisha 756056, India', 'lat': 21.508662298157777, 'lng': 86.90427850250248, 'asking_price': 10200000, 'property_type': '4bhk+', 'radius_m': 2000, 'intent': 'buy', 'custom_request': '', 'land_area_sqft': 12000.0, 'road_width_ft': None}
+DEBUG: resolved location: {'lat': 21.508662298157777, 'lng': 86.90427850250248, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '1118, 4th Cross Rd, near Baby Doll, Mysore Bank Colony, Srinivasnagar, Banashankari, Bengaluru, Karnataka 560050, India', 'lat': 12.936200864650948, 'lng': 77.55415656282607, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': '', 'land_area_sqft': None, 'road_width_ft': None}
+DEBUG: resolved location: {'lat': 12.936200864650948, 'lng': 77.55415656282607, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'WHR9+75 Bengaluru, Karnataka, India', 'lat': 12.940640325559727, 'lng': 77.56798745876183, 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': '', 'land_area_sqft': None, 'road_width_ft': None}
+DEBUG: resolved location: {'lat': 12.940640325559727, 'lng': 77.56798745876183, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'Prakash Kunj, 20-34, NR Colony, Basavanagudi, Bengaluru, Karnataka 560004, India', 'lat': 12.938208511791931, 'lng': 77.572695991537, 'asking_price': 9500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': '', 'land_area_sqft': None, 'road_width_ft': None}
+DEBUG: resolved location: {'lat': 12.938208511791931, 'lng': 77.572695991537, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': 'Embassy Meadows, 212, S.T. Bed, Cauvery Colony, Koramangala, Bengaluru, Karnataka 560047, India', 'lat': 12.933858589230425, 'lng': 77.63483740999403, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2500, 'intent': 'buy', 'custom_request': '', 'land_area_sqft': None, 'road_width_ft': None}
+DEBUG: resolved location: {'lat': 12.933858589230425, 'lng': 77.63483740999403, 'source': 'coordinates'}
+
+DEBUG: evaluate_property received data: {'address': '14-2, Vishweshwarapura, Sudhama Nagar, Bengaluru, Karnataka 560004, India', 'lat': 12.949584873590148, 'lng': 77.57544257356825, 'asking_price': 8500000, 'property_type': '2bhk', 'radius_m': 2000, 'intent': 'buy', 'custom_request': '', 'land_area_sqft': None, 'road_width_ft': None}
+DEBUG: resolved location: {'lat': 12.949584873590148, 'lng': 77.57544257356825, 'source': 'coordinates'}

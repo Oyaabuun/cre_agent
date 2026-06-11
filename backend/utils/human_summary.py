@@ -35,6 +35,12 @@ def build_human_summary(signals: dict) -> str:
         reasons.append(
             "high daily commute burden"
         )
+        
+    sfty = signals.get("crime_safety", {})
+    if sfty.get("score", 1.0) <= 0.4:
+        reasons.append(
+            "local safety profiles marking an elevated risk profile"
+        )
 
     if not reasons:
         return (
