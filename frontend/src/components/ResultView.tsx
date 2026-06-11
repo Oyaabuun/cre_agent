@@ -37,7 +37,7 @@ const formatValue = (val: number) => {
 }
 
 interface SignalDetails {
-    [key: string]: string | number | boolean | string[] | undefined | null;
+    [key: string]: any;
 }
 
 interface Signal {
