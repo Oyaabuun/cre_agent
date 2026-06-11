@@ -72,7 +72,7 @@ cd backend
 python -m venv .venv
 # Activate virtual environment
 .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 python -m uvicorn main:app --port 8000 --reload
 ```
 
