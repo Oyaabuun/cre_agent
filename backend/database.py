@@ -14,31 +14,34 @@ user_info_collection = db["user_info"]
 property_cache_collection = db["property_cache"]
 
 async def find_user_by_email(email: str):
-    return await user_info_collection.find_one({"email": email})
+    return await user_info_collection.find_one({"email": email.lower()})
 
 async def create_user_with_initial_credits(email: str, name: str, source: str = "google"):
+    email_lower = email.lower()
     user = {
-        "email": email,
+        "email": email_lower,
         "name": name,
         "source": source,
         "credits": 0,  # Starts with 0 credits until they pay minimum amount
     }
     await user_info_collection.insert_one(user)
-    return await find_user_by_email(email)
+    return await find_user_by_email(email_lower)
 
 async def topup_user_credits(email: str, amount: int = 5):
+    email_lower = email.lower()
     await user_info_collection.update_one(
-        {"email": email},
+        {"email": email_lower},
         {"$inc": {"credits": amount}}
     )
-    return await find_user_by_email(email)
+    return await find_user_by_email(email_lower)
 
 async def consume_user_credit(email: str):
-    user = await find_user_by_email(email)
+    email_lower = email.lower()
+    user = await find_user_by_email(email_lower)
     if not user or user.get("credits", 0) <= 0:
         return False
     await user_info_collection.update_one(
-        {"email": email},
+        {"email": email_lower},
         {"$inc": {"credits": -1}}
     )
     return True
