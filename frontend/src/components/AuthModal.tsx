@@ -119,16 +119,16 @@ export function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
                 {step === "auth" && !user && (
                     <div className="space-y-6">
                         <div className="space-y-4">
-                            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider pl-1">Email or Phone</label>
+                            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider pl-1">Email Address</label>
                             <input 
-                                type="text"
+                                type="email"
                                 className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-2xl text-white focus:outline-none focus:border-sky-500 transition-colors"
-                                placeholder="Enter email or phone"
+                                placeholder="Enter your email address"
                                 value={contact}
                                 onChange={e => setContact(e.target.value)}
                             />
                             <p className="text-[10px] text-slate-500 pl-1">
-                                For testing, you can use any email or phone. The demo OTP is <strong className="text-slate-400">123456</strong>.
+                                Enter your email address to receive your 6-digit verification code.
                             </p>
                             <button 
                                 onClick={handleSendOTP}
@@ -159,7 +159,7 @@ export function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
                         <div className="p-4 bg-sky-500/10 border border-sky-500/20 rounded-2xl flex items-start gap-3">
                             <ShieldCheck className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
                             <p className="text-sm text-sky-200 leading-relaxed">
-                                We've sent a 6-digit verification code to <strong className="text-white">{contact}</strong> (Use 123456 for now).
+                                We've sent a 6-digit verification code to <strong className="text-white">{contact}</strong>. Please check your email inbox (and spam folder).
                             </p>
                         </div>
                         <div className="space-y-4">
