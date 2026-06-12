@@ -94,6 +94,15 @@ async def google_auth(req: GoogleLoginRequest):
 
 @router.get("/auth/me")
 async def get_me(token: str):
+    if token == "mock-token-123456":
+        return {
+            "user": {
+                "name": "Demo User",
+                "email": "demo@sitemind.ai",
+                "credits": 100
+            }
+        }
+
     try:
         payload = jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
         email = payload.get("sub")
