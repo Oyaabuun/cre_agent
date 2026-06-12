@@ -1,6 +1,19 @@
 import os
 import sys
+import inspect
 from dotenv import load_dotenv
+
+# Intercept Uvicorn configuration dynamically to force binding to 0.0.0.0 and respect $PORT on Render
+for frame_info in inspect.stack():
+    frame = frame_info.frame
+    if frame.f_code.co_name == "load" and "uvicorn" in frame.f_code.co_filename and "config" in frame.f_code.co_filename:
+        config = frame.f_locals.get("self")
+        if config:
+            config.host = "0.0.0.0"
+            port_env = os.environ.get("PORT")
+            if port_env:
+                config.port = int(port_env)
+            break
 
 # Load environment variables from backend/.env if it exists (useful for local development from the root)
 backend_env = os.path.abspath(os.path.join(os.path.dirname(__file__), 'backend', '.env'))
