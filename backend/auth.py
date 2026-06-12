@@ -183,6 +183,10 @@ async def send_otp(req: OTPSendRequest):
     if "@" not in email_lower:
         raise HTTPException(status_code=400, detail="Only email addresses are supported for verification code delivery.")
         
+    # Bypass SMTP email dispatch for the test user
+    if email_lower == "test_sitemind@sitemindai.live":
+        return {"message": "OTP sent successfully to your email"}
+        
     otp_code = f"{random.randint(100000, 999999)}"
     
     # Store OTP in MongoDB
@@ -211,6 +215,26 @@ async def send_otp(req: OTPSendRequest):
 async def verify_otp(req: OTPVerifyRequest):
     email_lower = req.contact.lower().strip()
     
+    # Bypass logic for test user
+    if email_lower == "test_sitemind@sitemindai.live":
+        if req.code == "123456":
+            user = await find_user_by_email(email_lower)
+            if not user:
+                user = await create_user_with_initial_credits(email_lower, name="Test SiteMind", source="otp")
+                await db.user_info.update_one({"email": email_lower}, {"$set": {"credits": 100}})
+                user["credits"] = 100
+            token = create_jwt_token(user["email"])
+            return {
+                "token": token,
+                "user": {
+                    "name": user.get("name"),
+                    "email": user["email"],
+                    "credits": user.get("credits", 0)
+                }
+            }
+        else:
+            raise HTTPException(status_code=400, detail="Invalid OTP code")
+            
     # Look up OTP in database
     otp_record = await db.otps.find_one({"email": email_lower, "code": req.code})
     
