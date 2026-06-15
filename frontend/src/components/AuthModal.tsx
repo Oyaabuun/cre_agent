@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import { useAuth } from "@/lib/AuthContext"
-import { GoogleLogin } from "@react-oauth/google"
+
 import { PayPalButtons } from "@paypal/react-paypal-js"
 import { X, Mail, ShieldCheck, CreditCard } from "lucide-react"
 import { BACKEND_URL } from "@/lib/utils"
@@ -17,6 +17,8 @@ export function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
     const [contact, setContact] = useState("")
     const [otp, setOtp] = useState("")
     const [step, setStep] = useState<"auth" | "otp" | "payment">("auth")
+    const [isSending, setIsSending] = useState(false)
+    const [isVerifying, setIsVerifying] = useState(false)
 
     React.useEffect(() => {
         if (isOpen) {
@@ -32,6 +34,7 @@ export function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
 
     const handleSendOTP = async () => {
         if (!contact) return
+        setIsSending(true)
         try {
             await fetch(`${BACKEND_URL}/auth/otp/send`, {
                 method: "POST",
@@ -42,10 +45,13 @@ export function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
         } catch (e) {
             console.error("Backend OTP send failed, using fallback:", e)
             setStep("otp")
+        } finally {
+            setIsSending(false)
         }
     }
 
     const handleVerifyOTP = async () => {
+        setIsVerifying(true)
         try {
             const res = await fetch(`${BACKEND_URL}/auth/otp/verify`, {
                 method: "POST",
@@ -76,29 +82,12 @@ export function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
             } else {
                 alert("Invalid OTP")
             }
+        } finally {
+            setIsVerifying(false)
         }
     }
 
-    const handleGoogleSuccess = async (credentialResponse: any) => {
-        try {
-            const res = await fetch(`${BACKEND_URL}/auth/google`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ id_token: credentialResponse.credential })
-            })
-            if (res.ok) {
-                const data = await res.json()
-                login(data.token, data.user)
-                if (data.user.credits > 0) {
-                    onSuccess()
-                } else {
-                    setStep("payment")
-                }
-            }
-        } catch (e) {
-            console.error(e)
-        }
-    }
+
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
@@ -132,24 +121,11 @@ export function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
                             </p>
                             <button 
                                 onClick={handleSendOTP}
-                                className="w-full py-3 bg-sky-500 hover:bg-sky-400 text-white font-bold rounded-2xl transition-colors shadow-lg shadow-sky-500/20"
+                                disabled={isSending}
+                                className="w-full py-3 bg-sky-500 hover:bg-sky-400 disabled:opacity-50 text-white font-bold rounded-2xl transition-colors shadow-lg shadow-sky-500/20"
                             >
-                                Continue with OTP
+                                {isSending ? "Sending Code..." : "Continue with OTP"}
                             </button>
-                        </div>
-                        
-                        <div className="relative flex items-center justify-center">
-                            <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-slate-700"></div></div>
-                            <div className="relative bg-slate-900 px-4 text-xs text-slate-500 uppercase tracking-widest font-bold">Or</div>
-                        </div>
-
-                        <div className="flex justify-center">
-                            <GoogleLogin
-                                onSuccess={handleGoogleSuccess}
-                                onError={() => console.log('Login Failed')}
-                                theme="filled_black"
-                                shape="pill"
-                            />
                         </div>
                     </div>
                 )}
@@ -173,9 +149,10 @@ export function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
                             />
                             <button 
                                 onClick={handleVerifyOTP}
-                                className="w-full py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-2xl transition-colors shadow-lg shadow-emerald-500/20"
+                                disabled={isVerifying}
+                                className="w-full py-3 bg-emerald-500 hover:bg-emerald-400 disabled:opacity-50 text-white font-bold rounded-2xl transition-colors shadow-lg shadow-emerald-500/20"
                             >
-                                Verify & Proceed
+                                {isVerifying ? "Verifying..." : "Verify & Proceed"}
                             </button>
                         </div>
                     </div>

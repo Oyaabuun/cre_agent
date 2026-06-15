@@ -22,7 +22,7 @@ async def create_user_with_initial_credits(email: str, name: str, source: str = 
         "email": email_lower,
         "name": name,
         "source": source,
-        "credits": 0,  # Starts with 0 credits until they pay minimum amount
+        "credits": 100,  # Starts with 100 credits instead of 0
     }
     await user_info_collection.insert_one(user)
     return await find_user_by_email(email_lower)
