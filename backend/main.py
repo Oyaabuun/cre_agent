@@ -26,6 +26,10 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(payment_router)
 
+@app.get("/")
+async def root():
+    return {"status": "online", "message": "SiteMind AI Backend is running"}
+
 class DecisionInput(BaseModel):
     address: str | None = None
     lat: float | None = None
