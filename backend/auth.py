@@ -39,26 +39,13 @@ def create_jwt_token(email: str):
     return jwt.encode(payload, JWT_SECRET, algorithm="HS256")
 
 def send_otp_email(recipient_email: str, otp_code: str):
-    mail_username = os.getenv("MAIL_USERNAME")
-    mail_password = os.getenv("MAIL_PASSWORD")
-    mail_server = os.getenv("MAIL_SERVER", "smtp.gmail.com")
-    mail_port = os.getenv("MAIL_PORT")
+    resend_api_key = os.getenv("RESEND_API_KEY")
+    mail_sender = os.getenv("MAIL_DEFAULT_SENDER", "support@metriontech.com")
     
-    if not mail_username or not mail_password:
-        raise RuntimeError("SMTP configuration missing (MAIL_USERNAME and MAIL_PASSWORD must be configured).")
+    if not resend_api_key:
+        print(f"DEBUG (Fallback): OTP for {recipient_email} is {otp_code}")
+        raise RuntimeError("RESEND_API_KEY is not configured.")
         
-    try:
-        mail_port = int(mail_port) if mail_port else 587
-    except ValueError:
-        mail_port = 587
-        
-    mail_sender = os.getenv("MAIL_DEFAULT_SENDER", mail_username)
-    
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = f"{otp_code} is your SiteMind AI verification code"
-    msg["From"] = mail_sender
-    msg["To"] = recipient_email
-    
     html_content = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -167,16 +154,31 @@ def send_otp_email(recipient_email: str, otp_code: str):
 </body>
 </html>
 """
-    text_content = f"Your SiteMind AI verification code is {otp_code}. It is valid for 5 minutes."
     
-    msg.attach(MIMEText(text_content, "plain"))
-    msg.attach(MIMEText(html_content, "html"))
+    payload = {
+        "from": f"SiteMind AI <{mail_sender}>",
+        "to": [recipient_email],
+        "subject": f"{otp_code} is your SiteMind AI verification code",
+        "html": html_content
+    }
     
     print(f"DEBUG (Fallback): OTP for {recipient_email} is {otp_code}")
-    with smtplib.SMTP(mail_server, mail_port, timeout=10) as server:
-        server.starttls()
-        server.login(mail_username, mail_password)
-        server.sendmail(mail_sender, recipient_email, msg.as_string())
+    
+    # We use httpx to make a synchronous-like call using Client or just standard requests if preferred.
+    # We already import httpx at the top of the file!
+    with httpx.Client() as client:
+        response = client.post(
+            "https://api.resend.com/emails",
+            headers={
+                "Authorization": f"Bearer {resend_api_key}",
+                "Content-Type": "application/json"
+            },
+            json=payload,
+            timeout=10.0
+        )
+        
+        if response.status_code >= 400:
+            raise Exception(f"Resend API error: {response.text}")
 
 @router.post("/auth/otp/send")
 async def send_otp(req: OTPSendRequest):
