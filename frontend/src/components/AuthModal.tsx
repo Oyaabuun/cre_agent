@@ -36,11 +36,14 @@ export function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
         if (!contact) return
         setIsSending(true)
         try {
-            await fetch(`${BACKEND_URL}/auth/otp/send`, {
+            const res = await fetch(`${BACKEND_URL}/auth/otp/send`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ contact })
             })
+            if (!res.ok) {
+                alert("Email dispatch failed. Please check the Render backend logs to see your OTP code!")
+            }
             setStep("otp")
         } catch (e) {
             console.error("Backend OTP send failed, using fallback:", e)

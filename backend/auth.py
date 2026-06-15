@@ -172,7 +172,8 @@ def send_otp_email(recipient_email: str, otp_code: str):
     msg.attach(MIMEText(text_content, "plain"))
     msg.attach(MIMEText(html_content, "html"))
     
-    with smtplib.SMTP(mail_server, mail_port) as server:
+    print(f"DEBUG (Fallback): OTP for {recipient_email} is {otp_code}")
+    with smtplib.SMTP(mail_server, mail_port, timeout=10) as server:
         server.starttls()
         server.login(mail_username, mail_password)
         server.sendmail(mail_sender, recipient_email, msg.as_string())
